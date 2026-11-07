@@ -25,7 +25,7 @@ In this section, I identify the major computer system layers and explain how eac
 
 I opened System Information with `Windows + R`, typed `msinfo32` and pressed Enter. The purpose of this first step is to capture the system profile of the computer, such as OS name, version, processor and Secure Boot state.
 
-![EVID_01 Systems Specification on Windows]("C:\Users\jrita\OneDrive\文档\EVIDENCE_CIP-B101_Lab-1B\EVID_01_Systems Specification on Windows.png")
+![EVID_01 Systems Specification on Windows](EVID_01_Systems Specification on Windows.png)
 
 *EVID_01: Systems Specification on Windows*
 
