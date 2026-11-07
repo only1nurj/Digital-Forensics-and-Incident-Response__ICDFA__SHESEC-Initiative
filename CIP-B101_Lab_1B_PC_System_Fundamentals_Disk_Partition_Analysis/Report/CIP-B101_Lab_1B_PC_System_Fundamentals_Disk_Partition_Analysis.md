@@ -25,8 +25,7 @@ In this section, I identify the major computer system layers and explain how eac
 
 I opened System Information with `Windows + R`, typed `msinfo32` and pressed Enter. The purpose of this first step is to capture the system profile of the computer, such as OS name, version, processor and Secure Boot state.
 
-<img width="959" height="500" alt="EVID_01_Systems Specification on Windows" src="https://github.com/user-attachments/assets/60846bb5-3a7e-4c8c-8119-f54096d2faca" />
-
+<img width="959" height="500" alt="EVID_01_Systems Specification on Windows" src="https://github.com/user-attachments/assets/19eec40f-b18a-4a49-8260-808faa3efcd2" />
 
 *EVID_01: Systems Specification on Windows*
 
@@ -48,7 +47,7 @@ EVID_02 captures the system information using PowerShell. Information such as IP
 systeminfo
 ```
 
-![EVID_02 Systems Spec using PowerShell](screenshots/EVID_02_systeminfo_powershell.png)
+<img width="549" height="499" alt="EVID_02_Systems Spec using PowerShell" src="https://github.com/user-attachments/assets/fc29aec2-c6b5-4bcf-8727-a7fee3f21696" />
 
 *EVID_02: Systems Spec using PowerShell*
 
@@ -62,7 +61,7 @@ Get-Partition
 Get-Volume
 ```
 
-![EVID_03 Storage Info: Disk, Volume and Partition](screenshots/EVID_03_storage_info.png)
+<img width="959" height="417" alt="EVID_03_ Storage Info_Disk, Volume and Partition" src="https://github.com/user-attachments/assets/158e5acb-f3b6-460b-974a-3dd16c3937d0" />
 
 *EVID_03: Storage Info, Disk, Volume and Partition*
 
@@ -80,7 +79,7 @@ Get-Process | Select-Object -First 20 Name,Id,CPU,WorkingSet
 
 The running processes are identified but listed in alphabetical order. CPU consumption is not prioritised from highest to lowest. Unlike the PowerShell output, Task Manager tends to sort processes from the highest to the lowest CPU consumption.
 
-![EVID_04 Observe Running Process on PowerShell](screenshots/EVID_04_running_processes.png)
+<img width="472" height="371" alt="EVID_04_Observe Running Process on PowerShell" src="https://github.com/user-attachments/assets/8043e9d4-8e59-4d83-8eae-6de38daaa107" />
 
 *EVID_04: Observe Running Process on PowerShell*
 
@@ -105,7 +104,7 @@ Get-Disk | Select Number,FriendlyName,PartitionStyle,LogicalSectorSize,PhysicalS
 Get-Partition | Select DiskNumber,PartitionNumber,DriveLetter,Type,Offset,Size
 ```
 
-![EVID_05 Get Partition](screenshots/EVID_05_get_partition.png)
+<img width="660" height="498" alt="EVID_05_Get Partition" src="https://github.com/user-attachments/assets/1ea009b6-783d-45b4-a26e-c26b44dc4fda" />
 
 *EVID_05: Get Partition*
 
@@ -162,11 +161,11 @@ This section inspects the disk and partition tables using read-only commands on 
 
 Two ways were used to view disks and partitions. The first was the graphical Disk Management tool. The second was an administrator PowerShell window, running the commands shown below. DiskPart was also used with listing commands only.
 
-![EVID_06 Disk Management](screenshots/EVID_06a_disk_management.png)
+<img width="1127" height="887" alt="EVID_06_Disk Management" src="https://github.com/user-attachments/assets/c6dfa40b-a387-4be0-8eef-db958c2ba027" />
 
 *EVID_06: Disk Management*
 
-![EVID_06 Disk, Partition and Volume on PowerShell](screenshots/EVID_06b_powershell_disk_partition_volume.png)
+<img width="452" height="196" alt="EVID_06_Disk, Partition and Volume on PowerShell" src="https://github.com/user-attachments/assets/340c58e2-e730-43c9-af0e-3cf431025c6c" />
 
 *EVID_06: Disk, Partition and Volume on PowerShell*
 
@@ -178,9 +177,9 @@ DISKPART> list partition
 DISKPART> exit
 ```
 
-![EVID_06 DiskPart and Partitions on PowerShell](screenshots/EVID_06c_diskpart.png)
+<img width="304" height="395" alt="EVID_07_DiskPart and Partitions on PowerShell" src="https://github.com/user-attachments/assets/752108f0-62c1-497f-84a1-4e8c5d7c02f4" />
 
-*EVID_06: DiskPart and Partitions on PowerShell*
+*EVID_07: DiskPart and Partitions on PowerShell*
 
 ### D2. Linux/Kali method: read-only inspection
 
@@ -194,11 +193,11 @@ blkid
 df -h
 ```
 
-![EVID_08 Read only Inspection on Kali 1](screenshots/EVID_08a_kali_readonly_1.png)
+<img width="309" height="479" alt="EVID_08_Read only Inspection on Kali 1" src="https://github.com/user-attachments/assets/c162bf9d-e53f-4db1-a705-b62093e3942d" />
 
 *EVID_08: Read only Inspection on Kali 1*
 
-![EVID_08 Read only Inspection on Kali 2](screenshots/EVID_08b_kali_readonly_2.png)
+<img width="257" height="159" alt="EVID_08_Read only Inspection on Kali 2" src="https://github.com/user-attachments/assets/685620c6-d8f8-44f2-b31b-7cabe13b84cc" />
 
 *EVID_08: Read only Inspection on Kali 2*
 
@@ -216,7 +215,7 @@ This section explains the PC boot process and distinguishes MBR from GPT using e
 
 ### E1. Explain the boot process
 
-![EVID_09 A Boot Process Flow Diagram using Draw.io](screenshots/EVID_09a_boot_process_diagram.png)
+<img width="1264" height="768" alt="EVID_09_A Boot Process Flow Diagram using Draw io" src="https://github.com/user-attachments/assets/7dd76611-b613-46fe-b6f3-57dc2d70dbb6" />
 
 *EVID_09: A Boot Process Flow Diagram using Draw.io*
 
@@ -247,7 +246,7 @@ A file system is important in digital forensics because it determines how data, 
 Get-Volume
 ```
 
-![EVID_09 File System Inspected on PowerShell](screenshots/EVID_09b_filesystem_powershell.png)
+<img width="580" height="148" alt="EVID_09_File Systems inspected on PowerShell" src="https://github.com/user-attachments/assets/93b844ac-6a1e-41d9-b6df-7a0c4cfbb215" />
 
 *EVID_09: File System Inspected on PowerShell*
 
@@ -259,7 +258,7 @@ blkid
 df -Th
 ```
 
-![EVID_10 A File System Inspected on Kali Linux](screenshots/EVID_10_filesystem_kali.png)
+<img width="308" height="430" alt="EVID_10_File Systems inspected on Kali Linux" src="https://github.com/user-attachments/assets/a1ef0c5e-131e-482a-ab8e-d55a7e8c3cb1" />
 
 *EVID_10: A File System Inspected on Kali Linux*
 
@@ -277,7 +276,7 @@ df -Th
 
 **Task:** Verify the size of partitions 1 and 2 of a PC using a partition table. Record the verification process step by step and calculate the size of each partition in GB, using partition table evidence.
 
-![EVID_05 Get Partition](screenshots/EVID_05_get_partition.png)
+<img width="660" height="498" alt="EVID_05_Get Partition" src="https://github.com/user-attachments/assets/201754b0-42fc-432b-927a-4b170447548a" />
 
 *EVID_05: Get Partition*
 
@@ -285,7 +284,8 @@ df -Th
 
 | Task | Required evidence | Student notes / answer |
 |------|-------------------|------------------------|
-| Identify partition 1 | ![EVID_11 Partition 1](screenshots/EVID_11_partition_1.png)<br>*EVID_11: Partition 1* | EFI System Partition, no drive letter. `Get-Volume` lists it as FAT32. |
+| Identify partition 1 | <img width="597" height="205" alt="EVID_11_Partition 1" src="https://github.com/user-attachments/assets/4d970307-9ada-4b41-922e-383b29add5f6" />
+<br>*EVID_11: Partition 1* | EFI System Partition, no drive letter. `Get-Volume` lists it as FAT32. |
 | Record partition 1 sector count | Offset and Size from the table | Start sector = 1,048,576 / 512 = **2,048**. Sector count = 104,857,600 / 512 = **204,800**. End sector = 2,048 + 204,800 - 1 = **206,847**. |
 | Calculate partition 1 size | Formula and result | 204,800 x 512 = 104,857,600 bytes. 104,857,600 / 1024 / 1024 / 1024 = **0.0977 GB** (100 MB). |
 
@@ -293,7 +293,8 @@ df -Th
 
 | Task | Required evidence | Student notes / answer |
 |------|-------------------|------------------------|
-| Identify partition 2 | ![EVID_12 Partition 2](screenshots/EVID_12_partition_2.png)<br>*EVID_12: Partition 2* | Microsoft Reserved Partition (MSR), no drive letter, no file system. |
+| Identify partition 2 | <img width="597" height="205" alt="EVID_11_Partition 1" src="https://github.com/user-attachments/assets/adbdd13c-6c71-496f-b310-275ff80a2764" />
+ <br>*EVID_12: Partition 2* | Microsoft Reserved Partition (MSR), no drive letter, no file system. |
 | Record partition 2 sector count | Offset and Size from the table | Start sector = 105,906,176 / 512 = **206,848**. Sector count = 16,777,216 / 512 = **32,768**. End sector = 206,848 + 32,768 - 1 = **239,615**. |
 | Calculate partition 2 size | Formula and result | 32,768 x 512 = 16,777,216 bytes. 16,777,216 / 1024 / 1024 / 1024 = **0.0156 GB** (16 MB). |
 
@@ -303,7 +304,7 @@ df -Th
 powershell -command "Get-Volume | Select DriveLetter,FileSystem,FileSystemLabel,Size"
 ```
 
-![EVID_13 Compared to OS Reporting Size](screenshots/EVID_13_os_reported_size.png)
+<img width="383" height="95" alt="EVID_13_Compared to OS Reporting Size" src="https://github.com/user-attachments/assets/585f9f87-d423-4be6-b789-f4be0d436e26" />
 
 *EVID_13: Compared to OS Reporting Size*
 
